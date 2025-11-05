@@ -44,3 +44,18 @@ overlay.addEventListener(
 	// 	overlay.classList.add("hidden");
 	// }
 );
+
+// document.addEventListener("keydown", ()=> console.log("a key was pressed"));
+//keybord events keydown, keyup, keypress
+document.addEventListener("keydown", function (event) {
+	console.log("A key was pressed");
+	console.log(event);
+	console.log(event.code, " - ", event.key);
+	if (event.key === "Escape" && !modal.classList.contains("hidden")) {
+		console.log("Esc was preessed!");
+		// if(!modal.classList.contains("hidden")){
+		//     closeModal();
+		// }
+		closeModal();
+	}
+});
